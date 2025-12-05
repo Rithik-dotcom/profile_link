@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rithik_Profile_Link</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+  <link rel="stylesheet" href="./style.css">
   <!-- google font -->
   <!-- font-poppins  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -411,9 +411,121 @@
 
 
 
-  <!-- brand-carousel -->
+  <!-- Project-carousel -->
+  <svg class="svg-container">
+    <defs>
+      <filter id="🌀↖️" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+        <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+          <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
 
-  <!-- brand-carousel -->
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+        <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+          <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+        <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+          <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+        <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+          <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+
+        <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+        <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+        <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+
+        <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="30" xChannelSelector="R"
+          yChannelSelector="B" />
+      </filter>
+      <filter id="🌀🎨" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="7" />
+        <feColorMatrix type="hueRotate" result="pt1">
+          <animate attributeName="values" values="0;360;" dur=".6s" repeatCount="indefinite" calcMode="paced" />
+        </feColorMatrix>
+        <feComposite />
+        <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="7" seed="5" />
+        <feColorMatrix type="hueRotate" result="pt2">
+          <animate attributeName="values" values="0; 333; 199; 286; 64; 168; 256; 157; 360;" dur="5s"
+            repeatCount="indefinite" calcMode="paced" />
+        </feColorMatrix>
+        <feBlend in="pt1" in2="pt2" mode="normal" result="combinedNoise" />
+
+
+
+        <feDisplacementMap in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="B" />
+      </filter>
+    </defs>
+  </svg>
+  <mains class="main-container">
+    <div ↖️ class="card-container">
+      <div class="inner-container">
+        <div class="border-outer">
+          <div ↖️ class="main-card"></div>
+        </div>
+        <div class="glow-layer-1"></div>
+        <div class="glow-layer-2"></div>
+      </div>
+
+      <div class="overlay-1"></div>
+      <div class="overlay-2"></div>
+      <div class="background-glow"></div>
+      <a href="https://crwn-clothing-v2-redux-toolkit-three.vercel.app/" target="_blank">
+        <div class="content-container">
+          <div class="content-top">
+            <div class="scrollbar-glass">
+              Ecommerce
+            </div>
+            <img src="./Images/e.png" alt="img">
+            <p class="title">Clothing Project</p>
+          </div>
+      </a>
+      <hr class="divider" />
+
+      <div class="content-bottom">
+        <p class="description">In case you'd like to emphasize something very dramatically.</p>
+      </div>
+    </div>
+    </div>
+
+    <div 🎨 class="card-container">
+      <div class="inner-container">
+        <div class="border-outer">
+          <div class="main-card"></div>
+        </div>
+        <div class="glow-layer-1"></div>
+        <div class="glow-layer-2"></div>
+      </div>
+
+      <div class="overlay-1"></div>
+      <div class="overlay-2"></div>
+      <div class="background-glow"></div>
+
+      <a href="https://monsters-rolodex-v2.vercel.app/" target="_blank">
+        <div class="content-container">
+          <div class="content-top">
+            <div class="scrollbar-glass">
+              Search app
+            </div>
+            <img src="./Images/monster.png" alt="img">
+            <p class="title">Monster Application</p>
+          </div>
+      </a>
+
+      <hr class="divider" />
+
+      <div class="content-bottom">
+        <p class="description">In case you'd like to emphasize something very dramatically.</p>
+      </div>
+    </div>
+    </div>
+  </mains>
+
+  <!-- project-carousel -->
 
   <!-- Body -->
 
@@ -576,6 +688,7 @@
       alertBox.classList.add('hidden');
     });
   </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
